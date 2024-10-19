@@ -3,6 +3,7 @@ const continueGame = () => {
 
   const currentLetterElement = document.getElementById("current-letter");
   currentLetterElement.innerText = alphabet;
+  setbackgroundColorById(alphabet);
 }
 
 const playNow = () => {
