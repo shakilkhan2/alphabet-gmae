@@ -25,15 +25,16 @@
       class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center bg-contain"
     >
       <!-- Home Section -->
-      <section id="home-section" class="home ">
+      <section id="home-section" class="home">
         <div
-          class="text-center min-h-screen text-white flex flex-col justify-center items-center "
+          class="text-center min-h-screen text-white flex flex-col justify-center items-center"
         >
           <h1 class="font-anton text-7xl">ALPHABET CLASH</h1>
           <p class="font-poppins text-xs">
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
-          <button onclick="playNow()"
+          <button
+            onclick="playNow()"
             class="bg-white px-4 py-2 font-semibold text-[#010313] my-6 rounded-md"
           >
             Play Now
@@ -47,7 +48,12 @@
           <div
             class="h-[40vh] w-[50vw] relative bg-[#FFFFFFB3] ring-8 ring-[#2F2941] rounde-2xl ring-opacity-70 mx-auto rounded-md"
           >
-            <p class="text-8xl font-extrabold text-black text-center pt-20">Y</p>
+            <p
+              id="current-letter"
+              class="text-8xl font-extrabold text-black text-center pt-20 uppercase"
+            >
+              Y
+            </p>
           </div>
           <p
             class="bg-[#2F2941] text-white text-center font-extralight text-xs py-1 md:w-[20vw] absolute top-10 rounded-b-md left-1/2 transform -translate-x-1/2"
@@ -58,116 +64,115 @@
         <!-- keyboard start -->
         <div class="mt-72">
           <div class="my-1 flex w-full justify-center gap-1">
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
-              >q</kbd
+            <kbd id="q"
+              class="kbd bg-white cursor-default text-gray-900">q</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="w"
+              class="kbd bg-white cursor-default text-gray-900"
               >w</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="e"
+              class="kbd bg-white cursor-default text-gray-900"
               >e</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="r"
+              class="kbd bg-white cursor-default text-gray-900"
               >r</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="t"
+              class="kbd bg-white cursor-default text-gray-900"
               >t</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="y"
+              class="kbd bg-white cursor-default text-gray-900"
               >y</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="u"
+              class="kbd bg-white cursor-default text-gray-900"
               >u</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="i"
+              class="kbd bg-white cursor-default text-gray-900"
               >i</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="o"
+              class="kbd bg-white cursor-default text-gray-900"
               >o</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="p"
+              class="kbd bg-white cursor-default text-gray-900"
               >p</kbd
             >
           </div>
           <div class="my-1 flex w-full justify-center gap-1">
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="a"
+              class="kbd bg-white cursor-default text-gray-900"
               >a</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd is="s"
+              class="kbd bg-white cursor-default text-gray-900"
               >s</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="d"
+              class="kbd bg-white cursor-default text-gray-900"
               >d</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="f"
+              class="kbd bg-white cursor-default text-gray-900"
               >f</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="g"
+              class="kbd bg-white cursor-default text-gray-900"
               >g</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="h"
+              class="kbd bg-white cursor-default text-gray-900"
               >h</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="j"
+              class="kbd bg-white cursor-default text-gray-900"
               >j</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="k"
+              class="kbd bg-white cursor-default text-gray-900"
               >k</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="l"
+              class="kbd bg-white cursor-default text-gray-900"
               >l</kbd
             >
           </div>
           <div class="my-1 flex w-full justify-center gap-1">
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="z"
+              class="kbd bg-white cursor-default text-gray-900"
               >z</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="x"
+              class="kbd bg-white cursor-default text-gray-900"
               >x</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="c"
+              class="kbd bg-white cursor-default text-gray-900"
               >c</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="v"
+              class="kbd bg-white cursor-default text-gray-900"
               >v</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="b"
+              class="kbd bg-white cursor-default text-gray-900"
               >b</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="n"
+              class="kbd bg-white cursor-default text-gray-900"
               >n</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="m"
+              class="kbd bg-white cursor-default text-gray-900"
               >m</kbd
             >
-            <kbd
-              class="kbd bg-white hover:bg-amber-500 cursor-default text-gray-900"
+            <kbd id="/"
+              class="kbd bg-white cursor-default text-gray-900"
               >/</kbd
             >
           </div>

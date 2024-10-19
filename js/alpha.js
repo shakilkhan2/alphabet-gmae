@@ -1,5 +1,8 @@
 const continueGame = () => {
-  const alphabet = getRandomAlphabet(alphabet);
+  const alphabet = getRandomAlphabet();
+
+  const currentLetterElement = document.getElementById("current-letter");
+  currentLetterElement.innerText = alphabet;
 }
 
 const playNow = () => {

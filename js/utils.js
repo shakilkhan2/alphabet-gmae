@@ -15,7 +15,6 @@ const getRandomAlphabet = () => {
   const index = Math.round(randomNumber);
 
   const alphabet = alphabets[index];
-  console.log(alphabet);
 
   return alphabet;
 }
