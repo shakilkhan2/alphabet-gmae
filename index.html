@@ -64,115 +64,89 @@
         <!-- keyboard start -->
         <div class="mt-72">
           <div class="my-1 flex w-full justify-center gap-1">
-            <kbd id="q"
-              class="kbd bg-white cursor-default text-gray-900">q</kbd
+            <kbd id="q" class="kbd bg-white cursor-default text-gray-900"
+              >q</kbd
             >
-            <kbd id="w"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="w" class="kbd bg-white cursor-default text-gray-900"
               >w</kbd
             >
-            <kbd id="e"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="e" class="kbd bg-white cursor-default text-gray-900"
               >e</kbd
             >
-            <kbd id="r"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="r" class="kbd bg-white cursor-default text-gray-900"
               >r</kbd
             >
-            <kbd id="t"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="t" class="kbd bg-white cursor-default text-gray-900"
               >t</kbd
             >
-            <kbd id="y"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="y" class="kbd bg-white cursor-default text-gray-900"
               >y</kbd
             >
-            <kbd id="u"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="u" class="kbd bg-white cursor-default text-gray-900"
               >u</kbd
             >
-            <kbd id="i"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="i" class="kbd bg-white cursor-default text-gray-900"
               >i</kbd
             >
-            <kbd id="o"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="o" class="kbd bg-white cursor-default text-gray-900"
               >o</kbd
             >
-            <kbd id="p"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="p" class="kbd bg-white cursor-default text-gray-900"
               >p</kbd
             >
           </div>
           <div class="my-1 flex w-full justify-center gap-1">
-            <kbd id="a"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="a" class="kbd bg-white cursor-default text-gray-900"
               >a</kbd
             >
-            <kbd is="s"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd is="s" class="kbd bg-white cursor-default text-gray-900"
               >s</kbd
             >
-            <kbd id="d"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="d" class="kbd bg-white cursor-default text-gray-900"
               >d</kbd
             >
-            <kbd id="f"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="f" class="kbd bg-white cursor-default text-gray-900"
               >f</kbd
             >
-            <kbd id="g"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="g" class="kbd bg-white cursor-default text-gray-900"
               >g</kbd
             >
-            <kbd id="h"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="h" class="kbd bg-white cursor-default text-gray-900"
               >h</kbd
             >
-            <kbd id="j"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="j" class="kbd bg-white cursor-default text-gray-900"
               >j</kbd
             >
-            <kbd id="k"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="k" class="kbd bg-white cursor-default text-gray-900"
               >k</kbd
             >
-            <kbd id="l"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="l" class="kbd bg-white cursor-default text-gray-900"
               >l</kbd
             >
           </div>
           <div class="my-1 flex w-full justify-center gap-1">
-            <kbd id="z"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="z" class="kbd bg-white cursor-default text-gray-900"
               >z</kbd
             >
-            <kbd id="x"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="x" class="kbd bg-white cursor-default text-gray-900"
               >x</kbd
             >
-            <kbd id="c"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="c" class="kbd bg-white cursor-default text-gray-900"
               >c</kbd
             >
-            <kbd id="v"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="v" class="kbd bg-white cursor-default text-gray-900"
               >v</kbd
             >
-            <kbd id="b"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="b" class="kbd bg-white cursor-default text-gray-900"
               >b</kbd
             >
-            <kbd id="n"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="n" class="kbd bg-white cursor-default text-gray-900"
               >n</kbd
             >
-            <kbd id="m"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="m" class="kbd bg-white cursor-default text-gray-900"
               >m</kbd
             >
-            <kbd id="/"
-              class="kbd bg-white cursor-default text-gray-900"
+            <kbd id="/" class="kbd bg-white cursor-default text-gray-900"
               >/</kbd
             >
           </div>
@@ -186,13 +160,13 @@
             <div class="flex items-center gap-2">
               <p>Life</p>
               <i class="fa-solid fa-heart-circle-plus"></i>
-              <p>1</p>
+              <p id="life-line">5</p>
             </div>
           </button>
           <button
             class="bg-[#360490] px-6 text-sm py-2 text-white rounded-full"
           >
-            <div  class="flex items-center gap-2">
+            <div class="flex items-center gap-2">
               <p>Score</p>
               <p
                 class="bg-[#FFFFFF] text-center pb-2 h-[18px] w-[18px] rounded-full text-[#360490]"
@@ -212,8 +186,11 @@
           <h1 class="text-4xl font-extrabold text-white">
             Score : <span class="font-medium">14</span>
           </h1>
-          <button class="bg-[#FFFFFF] text-[#010313] px-2 py-1 rounded-md my-2">
-            Play Now
+          <button
+            onclick="playNow()"
+            class="bg-[#FFFFFF] text-[#010313] px-2 py-1 rounded-md my-2"
+          >
+            Play Again
           </button>
           <small class="text-[#FFFFFF] text-xs"
             >Practice will make you Pro</small

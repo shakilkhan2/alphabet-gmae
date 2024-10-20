@@ -5,14 +5,26 @@ document.addEventListener('keyup', handlebuttonpressed = (event) => {
   // console.log(event.key);
   const currentLetterElement = document.getElementById("current-letter");
   const currentAlphabet = currentLetterElement.innerText;
-  const expectedAlphabet = currentAlphabet;
-  const scoreElement = document.getElementById('score');
-  let scoreValue = scoreElement.innerText;
+  const expectedAlphabet = currentAlphabet.toLowerCase();
+  // score handaling
+  const scoreElement = document.getElementById("score");
+  let scoreValue = parseInt(scoreElement.innerText, 10);
+  // lifeline
+  const LifeLineElement = document.getElementById("life-line");
+  let lifeline = parseInt(LifeLineElement.innerText, 10);
   if (playerPressed === expectedAlphabet) {
-    scoreValue = scoreValue++;
+    scoreValue++;
+    scoreElement.innerText = scoreValue;
     continueGame();
-  } else {
-    console.log('not matched!')
+    removeBackgroundColorById(playerPressed);
+  } else{
+    lifeline--;
+    LifeLineElement.innerText = lifeline;
+
+    if(lifeline === 0){
+ hideElemetById("playground-section");
+ showElementById("score-section");
+    }
   }
 })
 
@@ -26,6 +38,7 @@ const continueGame = () => {
 
 const playNow = () => {
   hideElemetById("home-section");
+  hideElemetById("score-section");
   showElementById("playground-section");
   continueGame();
 };

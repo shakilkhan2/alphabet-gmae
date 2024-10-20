@@ -10,6 +10,10 @@ const setbackgroundColorById = (elementId) => {
   const element = document.getElementById(elementId);
   element.classList.add("bg-amber-500");
 };
+const removeBackgroundColorById = (elementId) => {
+  const element = document.getElementById(elementId);
+  element.classList.remove("bg-amber-500");
+};
 
 const getRandomAlphabet = () => {
   const alphabetString = "abcdefghijklmnopqrstuvwxyz";
