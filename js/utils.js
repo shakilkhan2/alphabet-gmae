@@ -8,12 +8,12 @@ const showElementById = (elementId) => {
 };
 const setbackgroundColorById = (elementId) => {
   const element = document.getElementById(elementId);
-  element.classList.add('bg-amber-500');
-}
+  element.classList.add("bg-amber-500");
+};
 
 const getRandomAlphabet = () => {
-  const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
-  const alphabets = alphabetString.split('');
+  const alphabetString = "abcdefghijklmnopqrstuvwxyz";
+  const alphabets = alphabetString.split("");
 
   const randomNumber = Math.random() * 25;
   const index = Math.round(randomNumber);
@@ -21,4 +21,4 @@ const getRandomAlphabet = () => {
   const alphabet = alphabets[index];
 
   return alphabet;
-}
+};

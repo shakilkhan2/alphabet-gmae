@@ -1,10 +1,18 @@
 // captured keypress
 document.addEventListener('keyup', handlebuttonpressed = (event) => {
+  const playerPressed = event.key;
   console.log('keyboard pressed.');
-  console.log(event.key);
+  // console.log(event.key);
   const currentLetterElement = document.getElementById("current-letter");
-  if (event.key == currentLetterElement) {
-    console.
+  const currentAlphabet = currentLetterElement.innerText;
+  const expectedAlphabet = currentAlphabet;
+  const scoreElement = document.getElementById('score');
+  let scoreValue = scoreElement.innerText;
+  if (playerPressed === expectedAlphabet) {
+    scoreValue = scoreValue++;
+    continueGame();
+  } else {
+    console.log('not matched!')
   }
 })
 
