@@ -1,6 +1,11 @@
 // captured keypress
-document.addEventListener('keyup', handlebuttonpressed = () => {
-  console.log('keyboard pressed.')
+document.addEventListener('keyup', handlebuttonpressed = (event) => {
+  console.log('keyboard pressed.');
+  console.log(event.key);
+  const currentLetterElement = document.getElementById("current-letter");
+  if (event.key == currentLetterElement) {
+    console.
+  }
 })
 
 const continueGame = () => {
