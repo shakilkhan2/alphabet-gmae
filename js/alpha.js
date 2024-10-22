@@ -15,8 +15,8 @@ document.addEventListener('keyup', handlebuttonpressed = (event) => {
   if (playerPressed === expectedAlphabet) {
     scoreValue++;
     scoreElement.innerText = scoreValue;
-    continueGame();
-    removeBackgroundColorById(playerPressed);
+    playNow();
+    removeBackgroundColorById(expectedAlphabet);
   } else{
     lifeline--;
     LifeLineElement.innerText = lifeline;
@@ -27,7 +27,7 @@ document.addEventListener('keyup', handlebuttonpressed = (event) => {
     }
   }
 })
-
+// continue game
 const continueGame = () => {
   const alphabet = getRandomAlphabet();
 
@@ -35,10 +35,10 @@ const continueGame = () => {
   currentLetterElement.innerText = alphabet;
   setbackgroundColorById(alphabet);
 }
-
+// play now
 const playNow = () => {
   hideElemetById("home-section");
-  hideElemetById("score-section");
+  // hideElemetById("score-section");
   showElementById("playground-section");
   continueGame();
 };
