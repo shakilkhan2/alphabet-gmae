@@ -1,15 +1,22 @@
+// get element innertext by id
+const getElementinnerTextById = (elementId) => {
+  const element = document.getElementById(elementId);
+  const text = element.innerText;
+
+  return text;
+};
 // get current value by id
 const getCurrentValueById = (valueId) => {
   const currentValueElement = document.getElementById(valueId);
   const currentValue = parseInt(currentValueElement.innerText, 10);
 
   return currentValue;
-}
+};
 // set value by id
 const setInnertextById = (elementId, value) => {
   const element = document.getElementById(elementId);
   element.innerText = value;
-}
+};
 // hide element by id
 function hideElementById(elementId) {
   const element = document.getElementById(elementId);

@@ -5,8 +5,9 @@ document.addEventListener(
     const playerPressed = event.key;
     console.log("keyboard pressed.");
     // console.log(event.key);
-    const currentLetterElement = document.getElementById("current-letter");
-    const currentAlphabet = currentLetterElement.innerText;
+    // const currentLetterElement = document.getElementById("current-letter");
+    // const currentAlphabet = currentLetterElement.innerText;
+    const currentAlphabet = getElementinnerTextById("current-letter");
     const expectedAlphabet = currentAlphabet.toLowerCase();
 
     if (playerPressed === expectedAlphabet) {
@@ -47,6 +48,9 @@ const restartGame = () => {
   // Hide the score section and show the playground
   hideElementById("score-section");
   showElementById("playground-section");
+  // 
+  const currentAlphabet = getElementinnerTextById("current-letter");
+  removeBackgroundColorById(currentAlphabet);
   continueGame();
 };
 // play now
