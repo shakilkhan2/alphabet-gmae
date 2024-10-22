@@ -22,7 +22,7 @@ document.addEventListener(
       currentLife--;
       setInnertextById("current-life", currentLife);
       if (currentLife === 0) {
-        hideElemetById("playground-section");
+        hideElementById("playground-section");
         showElementById("score-section");
         let scoreValue = getCurrentValueById("current-score");
         setInnertextById("final-score", scoreValue);
@@ -41,19 +41,17 @@ const continueGame = () => {
 // restart game
 const restartGame = () => {
   // refresh life
-  getCurrentValueById("current-life");
   setInnertextById("current-life", 5);
   // refresh scores
-  getCurrentValueById("current-score");
   setInnertextById("current-score", 0);
-  //
-  hideElemetById("score-section");
+  // Hide the score section and show the playground
+  hideElementById("score-section");
   showElementById("playground-section");
   continueGame();
 };
 // play now
 const playNow = () => {
-  hideElemetById("home-section");
+  hideElementById("home-section");
   showElementById("playground-section");
   continueGame();
 };

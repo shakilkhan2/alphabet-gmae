@@ -11,7 +11,7 @@ const setInnertextById = (elementId, value) => {
   element.innerText = value;
 }
 // hide element by id
-function hideElemetById(elementId) {
+function hideElementById(elementId) {
   const element = document.getElementById(elementId);
   element.classList.add("hidden");
 }
