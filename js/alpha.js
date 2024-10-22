@@ -1,32 +1,35 @@
 // captured keypress
-document.addEventListener('keyup', handlebuttonpressed = (event) => {
-  const playerPressed = event.key;
-  console.log('keyboard pressed.');
-  // console.log(event.key);
-  const currentLetterElement = document.getElementById("current-letter");
-  const currentAlphabet = currentLetterElement.innerText;
-  const expectedAlphabet = currentAlphabet.toLowerCase();
-  // score handaling
-  const scoreElement = document.getElementById("score");
-  let scoreValue = parseInt(scoreElement.innerText, 10);
-  // lifeline
-  const LifeLineElement = document.getElementById("life-line");
-  let lifeline = parseInt(LifeLineElement.innerText, 10);
-  if (playerPressed === expectedAlphabet) {
-    scoreValue++;
-    scoreElement.innerText = scoreValue;
-    playNow();
-    removeBackgroundColorById(expectedAlphabet);
-  } else{
-    lifeline--;
-    LifeLineElement.innerText = lifeline;
+document.addEventListener(
+  "keyup",
+  (handlebuttonpressed = (event) => {
+    const playerPressed = event.key;
+    console.log("keyboard pressed.");
+    // console.log(event.key);
+    const currentLetterElement = document.getElementById("current-letter");
+    const currentAlphabet = currentLetterElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
 
-    if(lifeline === 0){
- hideElemetById("playground-section");
- showElementById("score-section");
+    if (playerPressed === expectedAlphabet) {
+      // score handaling
+      let scoreValue = getCurrentValueById("current-score");
+      scoreValue++;
+      setInnertextById("current-score", scoreValue);
+      playNow();
+      removeBackgroundColorById(expectedAlphabet);
+    } else {
+      // lifeline
+      let currentLife = getCurrentValueById("current-life");
+      currentLife--;
+      setInnertextById("current-life", currentLife);
+      if (currentLife === 0) {
+        hideElemetById("playground-section");
+        showElementById("score-section");
+        let scoreValue = getCurrentValueById("current-score");
+        setInnertextById("final-score", scoreValue);
+      }
     }
-  }
-})
+  })
+);
 // continue game
 const continueGame = () => {
   const alphabet = getRandomAlphabet();
@@ -34,11 +37,23 @@ const continueGame = () => {
   const currentLetterElement = document.getElementById("current-letter");
   currentLetterElement.innerText = alphabet;
   setbackgroundColorById(alphabet);
-}
+};
+// restart game
+const restartGame = () => {
+  // refresh life
+  getCurrentValueById("current-life");
+  setInnertextById("current-life", 5);
+  // refresh scores
+  getCurrentValueById("current-score");
+  setInnertextById("current-score", 0);
+  //
+  hideElemetById("score-section");
+  showElementById("playground-section");
+  continueGame();
+};
 // play now
 const playNow = () => {
   hideElemetById("home-section");
-  // hideElemetById("score-section");
   showElementById("playground-section");
   continueGame();
 };

@@ -160,7 +160,7 @@
             <div class="flex items-center gap-2">
               <p>Life</p>
               <i class="fa-solid fa-heart-circle-plus"></i>
-              <p id="life-line">5</p>
+              <p id="current-life">5</p>
             </div>
           </button>
           <button
@@ -173,7 +173,7 @@
               >
                 $
               </p>
-              <p id="score">1</p>
+              <p id="current-score">0</p>
             </div>
           </button>
         </div>
@@ -184,10 +184,10 @@
           class="bg-[#FFFFFF33] flex flex-col px-8 py-10 rounded-md place-content-center justify-center items-center mx-auto"
         >
           <h1 class="text-4xl font-extrabold text-white">
-            Score : <span class="font-medium">14</span>
+            Score : <span id="final-score" class="font-medium">14</span>
           </h1>
           <button
-            onclick="playNow()"
+            onclick="restartGame()"
             class="bg-[#FFFFFF] text-[#010313] px-2 py-1 rounded-md my-2"
           >
             Play Again
