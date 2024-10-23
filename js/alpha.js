@@ -3,7 +3,9 @@ document.addEventListener(
   "keyup",
   (handlebuttonpressed = (event) => {
     const playerPressed = event.key;
-    console.log("keyboard pressed.");
+    if (playerPressed === "Escape") {
+      gameOver();
+    }
     // console.log(event.key);
     // const currentLetterElement = document.getElementById("current-letter");
     // const currentAlphabet = currentLetterElement.innerText;
@@ -23,10 +25,7 @@ document.addEventListener(
       currentLife--;
       setInnertextById("current-life", currentLife);
       if (currentLife === 0) {
-        hideElementById("playground-section");
-        showElementById("score-section");
-        let scoreValue = getCurrentValueById("current-score");
-        setInnertextById("final-score", scoreValue);
+        gameOver();
       }
     }
   })
@@ -59,3 +58,10 @@ const playNow = () => {
   showElementById("playground-section");
   continueGame();
 };
+// gaveover 
+const gameOver = () => {
+ hideElementById("playground-section");
+ showElementById("score-section");
+ let scoreValue = getCurrentValueById("current-score");
+ setInnertextById("final-score", scoreValue);
+}
